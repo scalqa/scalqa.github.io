@@ -32,7 +32,7 @@
     <p>He is the definition part (available in <a href="https://github.com/scalqa/samples/blob/master/src/example/opaque/PriceData.scala">samples</a>):</p> 
     <pre><code>type  Price = Price.TYPE.DEF
 
-extension (inline x: Double) inline def Dollars : Price = Price(x.Float)
+extension (inline x: Double) inline def Dollars : Price = Price(x.toFloat)
 
 object Price extends Float.Opaque.Data.Numerical[Price]("Price"):
   inline   def apply(inline v: Float): Price  = v.toOpaque
@@ -50,7 +50,7 @@ object Price extends Float.Opaque.Data.Numerical[Price]("Price"):
     <pre><code>type Price = Price.TYPE.DEF
 </code></pre> 
     <p>The <code>Price</code> alias is the public name to be used. This definition can be next to the '<code>object Price</code>' or can be in some other more accessible place, like a root package (it is for developers to decide).</p> 
-    <pre><code>extension (inline x: Double) inline def Dollars : Price = Price(x.Float)
+    <pre><code>extension (inline x: Double) inline def Dollars : Price = Price(x.toFloat)
 </code></pre> 
     <p>The extension creates a Double based Price constructor. This is an optional convenience pattern, but it is widely used in Scalqa. Double constructor will cover all primitives.</p> 
     <pre><code>object Price extends Float.Opaque.Data.Numerical[Price]("Price"):
