@@ -29,7 +29,7 @@
     </ul> 
     <h2><a href="#define" id="define" class="anchor"></a>Define</h2> 
     <p>Let's create an example of data element 'Price', which would be based on a Float, behave like a Float, but be distinct from a Float.</p> 
-    <p>He is the definition part (available in <a href="https://github.com/scalqa/samples/blob/master/src/example/opaque/PriceData.scala">samples</a>):</p> 
+    <p>Here is the definition part (available in <a href="https://github.com/scalqa/samples/blob/master/src/example/opaque/PriceData.scala">samples</a>):</p> 
     <pre><code>type  Price = Price.TYPE.DEF
 
 extension (inline x: Double) inline def Dollars : Price = Price(x.toFloat)
