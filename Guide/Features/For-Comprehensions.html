@@ -13,7 +13,7 @@
      <div class="byline"> 
      </div> 
     </header> 
-    <p>All containers fully support Scala language <a href="https://docs.scala-lang.org/tour/for-comprehensions.html">"for-comprehensions"</a> notation. There is one twist though, which must be kept in mind. Collections delegate functional processing to the <a href="../../api/scalqa/val/Stream.html">Stream</a> (stream), thus whenever a collection is included in "for-comprehension" it is automatically converted to <a href="../../api/scalqa/val/Stream.html">Stream</a>.</p> 
+    <p>All containers fully support Scala language <a href="https://docs.scala-lang.org/tour/for-comprehensions.html">"for-comprehensions"</a> notation. There is one twist though, which must be kept in mind. Collections delegate functional processing to the <a href="../../api/scalqa/val/Stream.html">Stream</a>, thus whenever a collection is included in "for-comprehension" it is automatically converted to <a href="../../api/scalqa/val/Stream.html">Stream</a>.</p> 
     <pre><code>    val packOfInts: Pack[Int] = (1 &lt;&gt; 10).stream.pack
 
     var sum = 0

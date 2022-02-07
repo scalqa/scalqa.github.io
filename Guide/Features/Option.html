@@ -61,7 +61,7 @@ Num Name              Ops/Sec %   Memory %   Last Value
 3   scala.Option[Int] 276     1   10.7mB 100 2.50005E9
 --- ----------------- ------- --- ------ --- -------------
 </code></pre> 
-    <p><code>Note.</code> Unlike streams, where specialized version extends regular, specialized options are not directly related to non-specialized. This is due to their opaque nature limitations. To make consistent experience specialized options can be assigned to generalized (with the help of implicit conversions or explicit method ".ref"). Generalized options have to be explicitly converted to sepcialized:</p> 
+    <p><code>Note.</code> Unlike streams, where specialized version extends regular, specialized options are not directly related to non-specialized. This is due to their opaque nature limitations. To make consistent experience specialized options can be assigned to generalized (with the help of implicit conversions or explicit method ".ref"). Generalized options have to be explicitly converted to specialized:</p> 
     <pre><code>var generalOpt:  Opt[Int] = VOID
 var specialOpt:  Int.Opt  = VOID
 
