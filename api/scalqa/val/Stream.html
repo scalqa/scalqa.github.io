@@ -25,7 +25,16 @@ node4 -> node0;
             <path d="M0 0h24v24H0z" fill="none"/>
             <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
           </svg>
-        </button><input class="filterableInput" placeholder="Filter all members" data-test-id="filterBarInput"></input></div><div class="filterLowerContainer"></div></div><div class="membersList"><div class="tabs"><div class="names"><button data-togglable="Extension" class="tab selected">Extension</button></div><div class="contents"><div data-togglable="Extension" class="tab selected"><h2 data-togglable="Extension">Extension</h2><div class="documentableList"><h3 class="groupHeader"></h3><div class="documentableElement" id="+-2be" data-f-extension="from Stream" data-f-keywords="inline" data-f-inherited="_extend"><a href="#+-2be" class="documentableAnchor"></a><div><span class="annotations monospace">@<span data-unresolved-link="">targetName</span>("join") </span></div><div class="header monospace"><span class="modifiers"><span class="other-modifiers">inline </span><span class="kind">def </span></span><a href="Stream$.html#+-2be" class="documentableName ">+</a><span class="signature">[A](v: A): <a href="Stream.html">Stream</a>[A]</span></div><div class="Guide"><span class="modifiers"></span><div><div class="originInfo"></div><div class="memberDocumentation"><div class="documentableBrief doc"><p>Alias for <a href="stream/_build/_extend.html#join-2be">join</a></p>
+        </button><input class="filterableInput" placeholder="Filter all members" data-test-id="filterBarInput"></input></div><div class="filterLowerContainer"></div></div><div class="membersList"><div class="tabs"><div class="names"><button data-togglable="Def" class="tab selected">Def</button><button data-togglable="Extension" class="tab selected">Extension</button></div><div class="contents"><div data-togglable="Def" class="tab selected"><h2 data-togglable="Def">Def</h2><div class="documentableList"><h3 class="groupHeader"></h3><div class="documentableElement" id="readOpt-0"><a href="#readOpt-0" class="documentableAnchor"></a><div><span class="annotations monospace"></span></div><div class="header monospace"><span class="modifiers"><span class="other-modifiers"> </span><span class="kind">def </span></span><a href="Stream.html#readOpt-0" class="documentableName ">readOpt</a><span class="signature">: <a href="Opt.html#DEF-0">Opt</a>[A]</span></div><div class="Guide"><span class="modifiers"></span><div><div class="originInfo"></div><div class="memberDocumentation"><div class="documentableBrief doc"><p>Read next option</p>
+</div><div class="cover"><div class="doc"><p>Read next option</p>
+<p>Optionally returns next element or empty option</p>
+<p>If empty option is returned, the stream is considered exhasted and should be discarded</p>
+<p>This is the only real method of stream interface, the rest of functionality is provided with extension methods for:</p>
+<ul>
+<li><a href="stream/_Build.html">building</a> stream pipeline</li>
+<li><a href="stream/_Use.html">using</a> stream data</li>
+</ul>
+</div><dl class="attributes"><dt>Source</dt><dd><a href="https://github.com/scalqa/scalqa/blob/master/core/src/scalqa/val/stream/__.scala">__.scala</a></dd></dl></div></div></div></div></div></div></div><div data-togglable="Extension" class="tab selected"><h2 data-togglable="Extension">Extension</h2><div class="documentableList"><h3 class="groupHeader"></h3><div class="documentableElement" id="+-2be" data-f-extension="from Stream" data-f-keywords="inline" data-f-inherited="_extend"><a href="#+-2be" class="documentableAnchor"></a><div><span class="annotations monospace">@<span data-unresolved-link="">targetName</span>("join") </span></div><div class="header monospace"><span class="modifiers"><span class="other-modifiers">inline </span><span class="kind">def </span></span><a href="Stream$.html#+-2be" class="documentableName ">+</a><span class="signature">[A](v: A): <a href="Stream.html">Stream</a>[A]</span></div><div class="Guide"><span class="modifiers"></span><div><div class="originInfo"></div><div class="memberDocumentation"><div class="documentableBrief doc"><p>Alias for <a href="stream/_build/_extend.html#join-2be">join</a></p>
 </div><div class="cover"><div class="doc"><p>Alias for <a href="stream/_build/_extend.html#join-2be">join</a></p>
 <p>Creates a new <a href="Stream.html">Stream</a> with given element appended to current <a href="Stream.html">Stream</a></p>
 <pre><code>  ((1 &lt;&gt; 5).stream + 99 + 100).tp
@@ -76,9 +85,9 @@ which are by default Double, Float and opaque numerals based on Double and Float
 
     val (first, second, third) = (1 &lt;&gt; 1000).stream.averageFew(v =&gt; v.toDouble, _ * 10.0, _ * 100.0)
 
-    first.tp     // Prints 5005
-    second.tp    // Prints 5005
-    third.tp     // Prints 5005
+    first.tp     // Prints 500.5
+    second.tp    // Prints 5005.0
+    third.tp     // Prints 50050.0
 </code></pre>
 <p>Note: Averages areavailable for types providing given <span data-unresolved-link="" title="Problem linking scalqa.val.stream.custom.Average: No DRI found for query">Stream.Custom.Average</span> implementations,
 which are by default Double, Float and opaque numerals based on Double and Float</p>

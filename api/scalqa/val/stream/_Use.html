@@ -77,9 +77,9 @@ which are by default Double, Float and opaque numerals based on Double and Float
 
     val (first, second, third) = (1 &lt;&gt; 1000).stream.averageFew(v =&gt; v.toDouble, _ * 10.0, _ * 100.0)
 
-    first.tp     // Prints 5005
-    second.tp    // Prints 5005
-    third.tp     // Prints 5005
+    first.tp     // Prints 500.5
+    second.tp    // Prints 5005.0
+    third.tp     // Prints 50050.0
 </code></pre>
 <p>Note: Averages areavailable for types providing given <span data-unresolved-link="" title="Problem linking scalqa.val.stream.custom.Average: No DRI found for query">Stream.Custom.Average</span> implementations,
 which are by default Double, Float and opaque numerals based on Double and Float</p>
