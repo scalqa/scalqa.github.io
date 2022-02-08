@@ -19,25 +19,15 @@ node4 -> node3;
             <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
           </svg>
         </button><input class="filterableInput" placeholder="Filter all members" data-test-id="filterBarInput"></input></div><div class="filterLowerContainer"></div></div><div class="membersList"><div class="tabs"><div class="names"><button data-togglable="Member" class="tab ">Member</button><button data-togglable="Def" class="tab selected">Def</button><button data-togglable="Implicit" class="tab selected">Implicit</button></div><div class="contents"><div data-togglable="Member" class="tab "><h2 data-togglable="Member">Member</h2><div class="documentableList"><h3 class="groupHeader"></h3><div class="documentableElement" data-f-keywords="abstract"><a href="scene/Application.html" class="documentableAnchor"></a><div><span class="annotations monospace"></span></div><div class="header monospace"><span class="modifiers"><span class="other-modifiers">abstract </span><span class="kind">class </span></span><a href="scene/Application.html" class="documentableName ">Application</a><span class="signature">(width: <a href="../lang/int/g/Opt.html">Int.Opt</a>, height: <a href="../lang/int/g/Opt.html">Int.Opt</a>, title: String, show: Boolean, verbose: Boolean)</span></div><div class="Guide"><span class="modifiers"></span><div><div class="originInfo"></div><div class="memberDocumentation"><div class="documentableBrief doc"></div><div class="cover"><div class="doc"><p>A convenient way to create GUI main executable class</p>
-<pre><code>```
-  object MyApp extends fx.Application {
-
-    scene = &quot;Hello World&quot;
-
-  }
-```
+<pre><code> object MyApp extends Fx.Application:
+    lazy val  View = Fx.Label(&quot;Hello&quot;)
 </code></pre>
 </div><dl class="attributes"><dt>Value Params</dt><dd><dl class="attributes"><dt>show</dt><dd><p>if <code>true</code>, <code>stage.show</code> will auto run</p>
 </dd><dt>title</dt><dd><p>application window title</p>
 </dd><dt>verbose</dt><dd><p>if true, console prints application name, start, and end time</p>
 </dd></dl></dd><dt>Source</dt><dd><a href="https://github.com/scalqa/scalqa/blob/master/fx/src/scalqa/fx/scene/application/__.scala">__.scala</a></dd></dl></div></div></div></div></div><div class="documentableElement" data-f-keywords="abstract"><a href="scene/Application.html" class="documentableAnchor"></a><div><span class="annotations monospace"></span></div><div class="header monospace"><span class="modifiers"><span class="other-modifiers">abstract </span><span class="kind">class </span></span><a href="scene/Application.html" class="documentableName ">Application</a><span class="signature">(width: <a href="../lang/int/g/Opt.html">Int.Opt</a>, height: <a href="../lang/int/g/Opt.html">Int.Opt</a>, title: String, show: Boolean, verbose: Boolean)</span></div><div class="Guide"><span class="modifiers"></span><div><div class="originInfo"></div><div class="memberDocumentation"><div class="documentableBrief doc"></div><div class="cover"><div class="doc"><p>A convenient way to create GUI main executable class</p>
-<pre><code>```
-  object MyApp extends fx.Application {
-
-    scene = &quot;Hello World&quot;
-
-  }
-```
+<pre><code> object MyApp extends Fx.Application:
+    lazy val  View = Fx.Label(&quot;Hello&quot;)
 </code></pre>
 </div><dl class="attributes"><dt>Value Params</dt><dd><dl class="attributes"><dt>show</dt><dd><p>if <code>true</code>, <code>stage.show</code> will auto run</p>
 </dd><dt>title</dt><dd><p>application window title</p>
